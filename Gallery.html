@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GALLERY</title>
+<link rel="stylesheet" href="gallery.css">
+<style>
+
+/* ---------------- BACKGROUND ---------------- */
+body {
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(120deg, #ffe2f3, #ead8ff, #ffd7e5);
+    background-size: 300% 300%;
+    animation: bgMove 30s infinite alternate;
+}
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* ---------------- HEADER ---------------- */
+.main-header {
+    background-color:#6A3B47;
+    color:white;
+    padding:37px;
+    text-align:center;
+    border-bottom:8px solid #B7838A;
+    font-size:80px;
+}
+
+/* ---------------- DATE&TIME ------------- */
+#datetime {
+            position: absolute;
+            top:10px;
+            left:10px;
+            color:#fff0f5;
+            font-size:21px;
+            font-weight: bold;
+        }
+
+        #datetime {
+            font-size: 21px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+
+/* ---------------- NAV ---------------- */
+nav ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    background:#B7838A;
+    border-bottom:4px solid #6A3B47;
+}
+nav ul li a {
+    color:white;
+    padding:18px 28px;
+    text-decoration:none;
+    display:block;
+    font-weight:bold;
+}
+nav ul li a:hover, nav ul li a.active {
+    background:#8E5C64;
+}
+
+/* ---------------- TITLE ---------------- */
+.gallery-title {
+    text-align:center;
+    font-size:40px;
+    margin-top:20px;
+    color:#6A3B47;
+    text-shadow:0 0 20px white;
+}
+
+/* ---------------- FLOATING EMOJIS (SPREAD EVERYWHERE) ---------------- */
+.floating {
+    position:fixed;
+    font-size:40px;
+    opacity:0.8;
+    animation: floatUp 8s infinite linear;
+}
+@keyframes floatUp {
+    0% { transform: translateY(110vh) rotate(0deg); }
+    100% { transform: translateY(-20vh) rotate(360deg); }
+}
+
+.floating:nth-child(1){ left:10%; animation-duration:7s; }
+.floating:nth-child(2){ left:25%; animation-duration:9s; }
+.floating:nth-child(3){ left:40%; animation-duration:6s; }
+.floating:nth-child(4){ left:60%; animation-duration:10s; }
+.floating:nth-child(5){ left:75%; animation-duration:8s; }
+.floating:nth-child(6){ left:85%; animation-duration:11s; }
+
+/* ---------------- CAROUSEL ---------------- */
+.carousel-wrapper {
+    width:100%;
+    overflow:hidden;
+    padding:40px 0;
+}
+
+/* row bergerak arah berbeza */
+.carousel {
+    display:flex;
+    gap:40px;
+}
+
+/* kiri → kanan */
+.left-to-right {
+    animation: moveL2R 22s linear infinite;
+}
+@keyframes moveL2R {
+    0% { transform: translateX(-60%); }
+    100% { transform: translateX(60%); }
+}
+
+/* kanan → kiri */
+.right-to-left {
+    animation: moveR2L 22s linear infinite;
+}
+@keyframes moveR2L {
+    0% { transform: translateX(60%); }
+    100% { transform: translateX(-60%); }
+}
+
+/* ---------------- POLAROID ---------------- */
+.polaroid {
+    width:220px;
+    background:black;
+    padding:12px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    transform: rotate(-3deg);
+    position:relative;
+    cursor:pointer;
+    transition:.3s;
+}
+.polaroid:hover {
+    transform: rotate(3deg) scale(1.07);
+    box-shadow:0 0 25px deeppink;
+}
+
+.clip {
+    font-size:24px;
+    position:absolute;
+    top:-25px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.polaroid img {
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.polaroid p {
+    margin-top:8px;
+    color:#6A3B47;
+    font-weight:bold;
+}
+
+/* ---------------- FOOTER ---------------- */
+.main-footer {
+    margin-top:40px;
+    background:#6A3B47;
+    color:white;
+    text-align:center;
+    padding:15px;
+    border-top:5px solid white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING EMOJIS -->
+<div class="floating">🌸</div>
+<div class="floating">💗</div>
+<div class="floating">✨</div>
+<div class="floating">🌼</div>
+<div class="floating">💞</div>
+<div class="floating">⭐</div>
+
+<!-- HEADER -->
+<header class="main-header">GALLERY📸</header>
+
+
+<!-- NAVIGATION -->
+<nav>
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Aboutme.html">About Me</a></li>
+        <li><a href="Education.html">Education</a></li>
+        <li><a href="Experience.html">Experience</a></li>
+        <li><a href="Family.html">Family</a></li>
+        <li><a href="Friends.html">Friends</a></li>
+        <li><a href="Favourite.html">Favourite</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+
+<h1 class="gallery-title">✨ My Memories ✨</h1>
+<div id="datetime"></div>
+
+<!-- 3 CAROUSEL ROWS -->
+<div class="carousel-wrapper">
+    <div class="carousel left-to-right">
+        <!-- paste gambar sendiri -->
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery1.jpg"><p>“You only live once, but if you do it right, once is enough.” — Mae West</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery2.jpg"><p>“Life is not a problem to be solved, but a reality to be experienced.” — Soren Kierkegaard</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery3.jpg"><p>“If you want to live a happy life, tie it to a goal, not to people or things.” — Albert Einstein</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery4.jpg"><p> “The whole secret of a successful life is to find out what is one’s destiny to do, and then do it.” — Henry Ford</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery5.jpg"><p>“Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma—which is living with the results of other people’s thinking.” — Steve Jobs</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery6.jpg"><p>“Once you figure out who you are and what you love about yourself, I think it all kinda falls into place.” — Jennifer Aniston</p></div>
+    </div>
+</div>
+
+<div class="carousel-wrapper">
+    <div class="carousel right-to-left">
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery7.jpg"><p>“Don’t be afraid to fail. It’s not the end of the world, and in many ways, it’s the first step toward learning something and getting better at it.” — Jon Hamm</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery8.jpg"><p> “Curiosity about life in all of its aspects, I think, is still the secret of great creative people.” — Leo Burnett</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery9.jpg"><p> “Life is really simple, but men insist on making it complicated.” — Confucius</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery10.jpg"><p>“Life is not a problem to be solved, but a reality to be experienced.” — Soren Kierkegaard</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery11.jpg"><p>“The best way to predict your future is to create it.” — Abraham Lincoln</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery12.jpg"><p> “Don’t settle for what life gives you; make life better and build something.” — Ashton Kutcher</p></div>
+    </div>
+</div>
+
+<div class="carousel-wrapper">
+    <div class="carousel left-to-right">
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery13.jpg"><p>“Life is like riding a bicycle. To keep your balance, you must keep moving.” — Albert Einstein</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery14.jpg"><p>“Keep calm and carry on.” — Winston Churchill</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery15.jpg"><p> “Keep smiling, because life is a beautiful thing and there’s so much to smile about.” — Marilyn Monroe</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery16.jpg"><p>“When we do the best we can, we never know what miracle is wrought in our life or the life of another.” — Helen Keller</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery17.jpg"><p>“Life is a flower of which love is the honey.” — Victor Hugo</p></div>
+        <div class="polaroid"><div class="clip">📌</div><img src="gallery18.jpg"><p>“You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.” — Dr. Seuss</p></div>
+    </div>
+</div>
+
+<div class="carousel-wrapper">
+    <div class="carousel right-to-left">
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery19.jpg"><p> “Live as if you were to die tomorrow. Learn as if you were to live forever.” — Mahatma Gandhi</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery20.jpg"><p>“Too many of us are not living our dreams because we are living our fears.” — Les Brown</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery21.jpg"><p>“The greatest pleasure of life is love.” — Euripides</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery22.jpg"><p>“Every moment is a fresh beginning.” — T.S. Eliot</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery23.jpg"><p> “Life is a succession of lessons which must be lived to be understood.” — Helen Keller</p></div>
+        <div class="polaroid"><div class="clip">📎</div><img src="gallery24.jpg"><p>“Life is about making an impact, not making an income.” — Kevin Kruse</p></div>
+    </div>
+</div>
+
+
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    © 2025 | For Educational Purpose Only | Nur Wahidda Syafiqah ♥</p>
+</footer>
+
+<script>
+// Tilt Effect
+document.querySelectorAll('.polaroid').forEach(card => {
+    card.addEventListener('mousemove', e => {
+        let x = (e.offsetX / card.offsetWidth - 0.5) * 15;
+        let y = (e.offsetY / card.offsetHeight - 0.5) * 15;
+        card.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = "rotate(-3deg)";
+    });
+});
+</script>
+
+<script>
+/* ==== LIVE DATE & TIME IN TOP LEFT==== */
+function updateDateTime() {
+    const now = new Date();
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
+    document.getElementById("datetime").textContent = now.toLocaleDateString("en-MY", options);
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friends</title>
+    <style>
+        body{
+            background-color: #E8D9EA;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #3B2529;
+            text-align: center;
+        }
+
+        /* ===== VIDEO BACKGROUND ===== */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(60%);
+        }
+
+        header{
+            background-color:#6A3B47cc;
+            color: white;
+            padding: 10px;
+            font-size: 28px;
+            letter-spacing: 1;
+            backdrop-filter: blur(2px);
+        }
+
+        #datetime {
+            position: absolute;
+            top:10px;
+            left:10px;
+            color:#fff0f5;
+            font-size:16px;
+            font-weight: bold;
+        }
+
+        nav ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #B7838Acc;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #6A3B47;
+            backdrop-filter: blur(2px);
+        }
+
+        nav ul li a{
+            display: block;
+            color: white;
+            padding: 14px 22px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover{
+            background-color: #8E5C64;
+            transform: scale(1.05);
+        }
+
+        main{
+            flex: 1;
+            padding: 34px 20px;
+        }
+
+        h2{
+            color: white;
+            font-size: 34px;
+            margin-bottom: 18px;
+            text-shadow: 2px 2px 8px #000;
+        }
+
+        .section-title{
+            background-color: #8E5C64dd;
+            padding: 12px 20px;
+            color: white;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 35px;
+            margin-bottom: 25px;
+            font-size: 22px;
+            letter-spacing: 1px;
+            backdrop-filter: blur(2px);
+        }
+
+        .friends-container{
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .friend-card{
+            background-color: #ffffffcc;
+            display: flex;
+            gap: 20px;
+            padding: 18px;
+            margin: 25px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            align-items: center;
+            animation-duration: 1.2s;
+            backdrop-filter: blur(3px);
+        }
+
+        .section-title:hover{
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        .slide-left{
+            animation-name: slideLeft;
+        }
+        .slide-right{
+            animation-name: slideRight;
+        }
+
+        @keyframes slideLeft{
+            from{ transform: translateX(-80px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideRight{
+            from{ transform: translateX(80px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .friend-card img{
+            width: 130px;
+            height: 130px;
+            border-radius: 14px;
+            object-fit: cover;
+            border: 4px solid #B7838A;
+        }
+
+        .friend-info{
+            text-align: justify;
+            flex: 1;
+        }
+
+        .friend-info h3{
+            color:#6A3B47;
+            margin-bottom: 6px;
+        }
+
+        footer{
+            background-color: #6A3B47cc;
+            color: #f2dce0;
+            padding: 20px;
+            margin-top: auto;
+            backdrop-filter: blur(3px);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== VIDEO BACKGROUND ===== -->
+<video autoplay muted loop id="bg-video">
+    <source src="friendsbg.mp4" type="video/mp4">
+</video>
+
+<header>
+    <h1>MY FRIENDS 🤍</h1>
+    <div id="datetime"></div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Aboutme.html">About Me</a></li>
+        <li><a href="Education.html">Education</a></li>
+        <li><a href="Experience.html">Experience</a></li>
+        <li><a href="Family.html">Family</a></li>
+        <li><a href="Friends.html">Friends</a></li>
+        <li><a href="Favourite.html">Favourite</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>My Beautiful People 🫶</h2>
+
+    <div class="section-title">👭 Friends from School</div>
+    <div class="friends-container">
+
+        <div class="friend-card slide-left">
+            <img src="damia.jpg">
+            <div class="friend-info">
+                <h3><ins>Nur Damia Lutfiah 💐</ins></h3>
+                <p><mark><em>Damia</em></mark> is a faithful companion and a deeply emphatic presence in my life. She is the reliable source of encouragement who always offers practical advice to help me shoulder my responsibilities. We have shared our struggles since school days — she is the trusted listener I turn to during my lowest moments. Truly a comfort person.💚</p>
+            </div>
+        </div>
+
+        <div class="friend-card slide-right">
+            <img src="elyssa.jpg">
+            <div class="friend-info">
+                <h3><ins>Nor Elyssa Alia🌸</ins></h3>
+                <p><mark><em>Elyssa</em></mark> is a genuinely kind and reliable friend. She is a true partner in both deep conversations and spontaneous laughter, always ready to share in my happiness and sadness. A dependable soul — she is usually the first to help me overcome any difficulty.💗</p>
+            </div>
+        </div>
+
+        <div class="friend-card slide-right">
+            <img src="athirah.jpg">
+            <div class="friend-info">
+                <h3><ins>Nur Athirah Anishah🌸</ins></h3>
+                <p><mark><em>Athirah</em></mark> is a kind friend from primary school. She always listens to my stories. Even though we rarely meet due to time constraints, nothing ever changes when we finally do meet 🤭</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-title">🎓 Friends from Diploma</div>
+    <div class="friends-container">
+
+        <div class="friend-card slide-left">
+            <img src="dania.jpg">
+            <div class="friend-info">
+                <h3><ins>Nur Adliana Dania✨</ins></h3>
+                <p><mark><em>Dania</em></mark> is the one who makes every day feel special. She was my most consistent companion throughout the university journey. She is incredibly kind and supportive — helping me with assignments, attending classes by my side, and even accompanying me to the clinic when I was sick.😆❤️</p>
+            </div>
+        </div>
+
+        <div class="friend-card slide-right">
+            <img src="amalia.jpg">
+            <div class="friend-info">
+                <h3><ins>Amalia Diyanah🌷</ins></h3>
+                <p><mark><em>Amalia</em></mark> is my favourite partner-in-crime. We share the same passion for reading and K-dramas, which makes our friendship fun and meaningful. Whether we're hunting for limited-edition books or having drama marathons, our shared interests always connect us.🫶🏻</p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 | For Educational Purpose Only | Nur Wahidda Syafiqah ♥</p>
+</footer>
+
+<script>
+function updateDateTime() {
+    const now = new Date();
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
+    document.getElementById("datetime").textContent = now.toLocaleDateString("en-MY", options);
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

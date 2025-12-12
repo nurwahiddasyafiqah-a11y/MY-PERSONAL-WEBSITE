@@ -1,0 +1,221 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+    <title>Education</title>
+
+    <style>
+        body{
+            background-color: #E8D9EA; /* fallback color */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            color: #3B2529;
+        }
+
+        header{
+            background-color:#6A3B47; /* Deep Plum */
+            color: white;
+            padding: 10px;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        
+        #datetime {
+            position: absolute;
+            top:10px;
+            left:10px;
+            color:#fff0f5;
+            font-size:16px;
+            font-weight: bold;
+        }
+
+        #datetime {
+            font-size: 16px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        /*---Navigation Bar---*/
+        nav ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #B7838A; 
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #6A3B47;
+        }
+
+        nav ul li a{
+            display:block;
+            color: white;
+            padding: 20px 18px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover{
+            background-color: #8E5C64;
+            transform: scale(1.05);
+        }
+
+        /* MAIN WITH BACKGROUND IMAGE */
+        main.bg-image{
+            flex: 1;
+            padding: 40px 20px;
+            background-image: url('education.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h2{
+            font-size: 37px;
+            color: black;
+            text-shadow: 2px 2px 6px rgba(255,255,255,0.7);
+        }
+
+        .card-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .edu-card{
+            width: 350px;
+            padding: 25px;
+            border-radius: 16px;
+            border: 4px solid #B7838A;
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+            backdrop-filter: blur(44px);
+            transition: 0.3s;
+            color: white;
+        }
+
+        .edu-card:hover{
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.35);
+        }
+
+        .edu-card h3{
+            color: darkgoldenrod;
+            margin-bottom: 10px;
+        }
+
+        .edu-card p{
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .edu-card img{
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 15px;
+        }
+
+        footer{
+            background:#6A3B47;
+            color: #f2dce0;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EDUCATION JOURNEY🎓</h1>
+    <div id="datetime"></div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Aboutme.html">About Me</a></li>
+        <li><a href="Education.html">Education</a></li>
+        <li><a href="Experience.html">Experience</a></li>
+        <li><a href="Family.html">Family</a></li>
+        <li><a href="Friends.html">Friends</a></li>
+        <li><a href="Favourite.html">Favourite</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+
+<main class="bg-image">
+    <h2><i><b>This is My Education Journey ✨</b></i></h2>
+
+    <div class="card-container">
+
+        <div class="edu-card">
+             <img src="tadika.jpg" alt="tadika Image">
+            <h3><b>📚 Kindergarten </b></h3>
+            <p><b>Tadika Kemas Chini 03</b><br>2009-2010</p>
+        </div>
+
+        <div class="edu-card">
+             <img src="skctl.jpg" alt="skctl Image">
+            <h3><b>📚 Pre-school & Primary School</b></h3>
+            <p><b>Sekolah Kebangsaan Chini 3&5</b><br>2011-2012</p>
+        </div>
+
+        <div class="edu-card">
+             <img src="sktb.jpg" alt="sktb Image">
+            <h3><b>📚 Primary School</b></h3>
+            <p><b>Sekolah Kebangsaan Tanjung Batu</b><br>2013 - 2017</p>
+        </div>
+
+        <div class="edu-card">
+             <img src="gallery24.jpg" alt="smkn Image">
+            <h3><b>🏫 Secondary School</b></h3>
+            <p><b>Sekolah Menegah Kebangsaan Nenasi</b><br>2018 - 2022</p>
+        </div>
+
+        <div class="edu-card">
+             <img src="diploma.jpg" alt="diploma Image">
+            <h3><b>🎓 Diploma</b></h3>
+            <p><b>Diploma in Information Management at <aabr title="Universiti Teknologi Mara">UiTM</aabr></b><br>2023 - Now</p>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 | For Educational Purpose Only | Nur Wahidda Syafiqah ♥</p>
+</footer>
+
+<script>
+/* ==== LIVE DATE & TIME IN TOP LEFT==== */
+function updateDateTime() {
+    const now = new Date();
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
+    document.getElementById("datetime").textContent = now.toLocaleDateString("en-MY", options);
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+
+</body>
+</html>

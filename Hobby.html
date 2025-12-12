@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hobby</title>
+    <link rel="stylesheet" href="hobby.css">
+</head>
+<body>
+
+    <!-- FLOATING EMOJI BUBBLES -->
+    <div class="bubbles"></div>
+
+    <header>
+        <h1>MY HOBBIES 💖</h1>
+        <div id="datetime"></div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Aboutme.html">About Me</a></li>
+            <li><a href="Education.html">Education</a></li>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a href="Family.html">Family</a></li>
+            <li><a href="Friends.html">Friends</a></li>
+            <li><a href="Favourite.html">Favourite</a></li>
+            <li><a href="Hobby.html">Hobby</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 class="title">Things I Love To Do ✨</h2>
+
+        <div class="hobby-container">
+
+            
+            <div class="hobby-card" data-emoji="📚">
+                <img src="music.jpg" alt="Hobby Image">
+                <h3>🎧 Listening to Music</h3>
+                <p>Music keeps my mood alive! I enjoy getting lost in the melodies and lyrics.</p>
+            </div>
+
+            <div class="hobby-card">
+                <img src="fotography.jpg" alt="Hobby Image">
+                <h3>📸 Photography</h3>
+                <p>I love capturing moments, scenery, and beautiful things to keep the memories alive.</p>
+            </div>
+
+            <div class="hobby-card">
+                <img src="reading.jpg" alt="Hobby Image">
+                <h3>📚 Reading</h3>
+                <p>Reading helps me relax, I feel like I am a traveler in the world of words. Reading also allows me to escape from reality and experience thousands of different stories.</p>
+            </div>
+
+            <div class="hobby-card">
+                <img src="painting.jpg" alt="Hobby Image">
+                <h3>🎨 Painting</h3>
+                <p>I love to recreate the beauty I see in pictures, especially nature scenery flowers and animals.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | For Educational Purpose Only | Nur Wahidda Syafiqah ♥</p>
+    </footer>
+
+    <script src="hobby.js"></script>
+
+    <script>
+/* ==== LIVE DATE & TIME IN TOP LEFT==== */
+function updateDateTime() {
+    const now = new Date();
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
+    document.getElementById("datetime").textContent = now.toLocaleDateString("en-MY", options);
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

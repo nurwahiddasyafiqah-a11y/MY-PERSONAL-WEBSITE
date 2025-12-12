@@ -1,0 +1,121 @@
+/* BACKGROUND */
+body {
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(120deg, #ffe2f3, #ead8ff, #ffd7e5);
+    background-size: 300% 300%;
+    animation: bgMove 10s infinite alternate;
+}
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    100% {background-position: 100% 50%;}
+}
+
+/* TITLE */
+.gallery-title {
+    text-align:center;
+    font-size:40px;
+    margin-top:20px;
+    color:#6A3B47;
+    text-shadow:0 0 20px white;
+}
+.gallery-sub {
+    text-align:center;
+    color:#6A3B47;
+}
+
+/* FLOATING EMOJIS (WHOLE SCREEN RANDOM) */
+.floating {
+    position: fixed;
+    font-size: 40px;
+    opacity: 0.7;
+    animation: floatUp 11s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) rotate(0deg); }
+    100% { transform: translateY(-20vh) rotate(360deg); }
+}
+
+/* RANDOM POSITIONS FOR 10 EMOJIS */
+.floating:nth-child(1) { left: 5%; animation-duration: 10s; }
+.floating:nth-child(2) { left: 20%; animation-duration: 14s; }
+.floating:nth-child(3) { left: 35%; animation-duration: 9s; }
+.floating:nth-child(4) { left: 50%; animation-duration: 13s; }
+.floating:nth-child(5) { left: 65%; animation-duration: 12s; }
+.floating:nth-child(6) { left: 80%; animation-duration: 16s; }
+.floating:nth-child(7) { left: 25%; animation-duration: 11s; }
+.floating:nth-child(8) { left: 45%; animation-duration: 15s; }
+.floating:nth-child(9) { left: 70%; animation-duration: 10s; }
+.floating:nth-child(10) { left: 90%; animation-duration: 17s; }
+
+/* CAROUSEL */
+.carousel-wrapper {
+    width:100%;
+    overflow:hidden;
+    padding:40px 0;
+}
+.carousel {
+    display:flex;
+    gap:40px;
+}
+
+/* SLIDE ANIMATIONS */
+@keyframes slide-left {
+    0% { transform: translateX(30%); }
+    50% { transform: translateX(-50%); }
+    100% { transform: translateX(30%); }
+}
+
+@keyframes slide-right {
+    0% { transform: translateX(-30%); }
+    50% { transform: translateX(50%); }
+    100% { transform: translateX(-30%); }
+}
+
+/* SELANG SELI */
+.row1 { animation: slide-left 22s linear infinite; }
+.row2 { animation: slide-right 23s linear infinite; }
+.row3 { animation: slide-left 26s linear infinite; }
+.row4 { animation: slide-right 24s linear infinite; }
+
+/* POLAROID */
+.polaroid {
+    width:220px;
+    background:#111;
+    padding:12px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(255,255,255,0.2);
+    transform: rotate(-3deg);
+    transition:.4s;
+    cursor:pointer;
+    position:relative;
+}
+
+.polaroid img {
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:5px;
+
+}
+
+.clip {
+    font-size:24px;
+    position:absolute;
+    top:-25px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.polaroid p {
+    margin-top:8px;
+    color:#6A3B47;
+    font-weight:bold;
+}
+
+.polaroid {
+    border:4px solid white;
+}
+

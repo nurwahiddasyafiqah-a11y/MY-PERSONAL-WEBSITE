@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Wahidda Syafiqah</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #3B2529;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* ===== BACKGROUND VIDEO ===== */
+.video-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -3;
+    filter: brightness(60%);
+}
+
+/* HEADER */
+header {
+    background: rgba(106, 59, 71, 0.85);
+    color: white;
+    padding: 35px 20px;
+    font-size: 24px;
+    backdrop-filter: blur(6px);
+}
+
+#dateTime {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* NAVBAR */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(183, 131, 138, 0.9);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 24px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background-color: #8E5C64;
+    border-radius: 10px;
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 60px 38px;
+    display: flex;
+    justify-content: center;
+    background-image: url('homebg.jpg');
+    background-size: cover;
+}
+
+.content-box {
+    width: 85%;
+    max-width: 820px;
+    padding: 35px;
+    border-radius: 20px;
+    border: 2px solid #B7838A;
+    background: rgba(255,255,255,0.75);
+}
+
+.profile-photo {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+}
+
+h2 {
+    color: #6A3B47;
+    font-size: 32px;
+}
+
+footer {
+    background-color: #6A3B47;
+    color: #f2dce0;
+    padding: 20px;
+}
+
+/* ===== NAME INPUT POPUP ===== */
+#nameOverlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url('homebg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-box {
+    background: rgba(255,255,255,0.95);
+    padding: 40px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.name-box input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+.name-box button {
+    padding: 10px 25px;
+    background: #6A3B47;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.name-box button:hover {
+    background: #8E5C64;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAME INPUT POPUP -->
+<div id="nameOverlay">
+    <div class="name-box">
+        <h2>Welcome 💖</h2>
+        <p>Please enter your name</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <br><br>
+        <button onclick="submitName()">Enter</button>
+    </div>
+</div>
+
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop class="video-bg">
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<header>
+    <h1 id="welcomeText">WELCOME TO MY PERSONAL WEBSITE</h1>
+    <div id="dateTime"></div>
+</header>
+
+<nav>
+<ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Aboutme.html">About Me</a></li>
+    <li><a href="Education.html">Education</a></li>
+    <li><a href="Experience.html">Experience</a></li>
+    <li><a href="Family.html">Family</a></li>
+    <li><a href="Friends.html">Friends</a></li>
+    <li><a href="Favourite.html">Favourite</a></li>
+    <li><a href="Hobby.html">Hobby</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+</ul>
+</nav>
+
+<main>
+<div class="content-box">
+    <img src="wahidda2.jpg" class="profile-photo">
+    <h2>My Personal Space ✨</h2>
+    <p>Hello! My name is Nur Wahidda Syafiqah.</p>
+    <p>I am a diploma student in information management (CDIM110) at Universiti Teknologi Mara (UiTM).
+    <p>This website was created for my IMD318 assignment and will be a place where I share my life, experiences, and memories. 🌷</p>
+
+</div>
+</main>
+
+<footer>
+<p>&copy; 2025 | For Educational Purpose Only | Nur Wahidda Syafiqah ♥</p>
+</footer>
+
+<script src="home.js"></script>
+
+</body>
+</html>

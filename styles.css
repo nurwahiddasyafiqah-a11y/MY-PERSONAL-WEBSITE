@@ -1,0 +1,78 @@
+/general styling/
+body{
+	font-family:arial,sans-serif;
+	background-color: AntiqueWhite;
+	margin:0;
+	padding:0;
+}
+
+/heading/
+h1 {
+	text-align: center;
+	color:black;
+	margin:20px 0;
+}
+
+/navigation bar/
+nav {
+	background:AliceBlue;
+	width: 800px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	margin:0 auto;
+	padding: 10px 18px;
+	border-radius:44px;
+	box-shadow:2px 2px 20px rgba(0,0,0,0.3);
+}
+
+nav > a {
+	color:black;
+	text-decoration: none;
+	padding:8px 16px;
+	border-radius:29px;
+	transition: background 0.25s, color 0.25s;
+}
+
+nav > a:hover{
+	background:rgb(56,130,209);
+	color:white;
+}
+
+/website content/ 
+.content {
+	background: white;
+	color: black;
+	width:80%;
+	max-width:800px;
+	margin: 40px auto 100px auto;
+	padding:30px;
+	border-radius:15px;
+	box-shadow:2px 2px 15px rgba(0,0,0,0.2);
+	text-align:center;
+	transition:background 0.25, color 0.25s;
+}
+
+.content h2 {
+	margin-bottom:15px;
+	color:rgb(56,130,209);
+}
+
+/footer styling/
+.footer {
+	background:#111;
+	color:#ddd;
+	text-align:center;
+	padding:15px 0;
+	bottom:0;
+	left:0;
+	width:100%;
+	border-top: 3px solid rgb(56,130,209);
+	font-size:0.9em;
+	box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+	position:fixed;
+}
+
+.footer p {
+	margin:0;
+}
